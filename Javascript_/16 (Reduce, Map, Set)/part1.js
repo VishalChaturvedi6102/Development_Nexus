@@ -15,6 +15,8 @@ console.log(result); // 150
 const result2 = arr.reduce((acc,curr)=> acc+curr,0);
 console.log(result2); // 150
 
+
+
 // hasOwnProperty
 let obj4 = {
     name:"rohit",
@@ -24,6 +26,7 @@ let current = "name";
 console.log(obj4.hasOwnProperty(current)) // Agar present hai toh true otherwise false.
 
 let arr1 = ["orange","apple","banana","orange","apple","banana","orange","grapes"];
+
 // Final result should be in object form. And it will tell me ki orange kitni baar aaya, grapes kitni baar..
 const result3 = arr1.reduce((acc,curr)=>{
     if(acc.hasOwnProperty(curr))

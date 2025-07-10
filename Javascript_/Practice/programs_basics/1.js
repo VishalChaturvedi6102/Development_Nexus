@@ -30,3 +30,26 @@ function factorial(n) {
 }
 
 console.log(factorial(5)); // Output: 120
+
+// Write a JavaScript function to check if a given string is a palindrome
+function isPalindrome(str) {
+    const reversed = str.split('').reverse().join('');
+    return str === reversed;
+}
+console.log(isPalindrome("racecar")); // Output: true
+
+
+
+async function fetchMultipleData() {
+  try {
+    const [userData, postData] = await Promise.all([
+      fetch('/api/users/1').then(res => res.json()),
+      fetch('/api/posts').then(res => res.json())
+    ]);
+    console.log('User Data:', userData);
+    console.log('Post Data:', postData);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+fetchMultipleData();

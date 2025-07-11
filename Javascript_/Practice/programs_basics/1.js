@@ -53,3 +53,16 @@ async function fetchMultipleData() {
   }
 }
 fetchMultipleData();
+
+
+
+// Check if a Number is Even or Odd
+function checkEvenOdd(num) {
+  if (num % 2 === 0) {
+    console.log(num + " is Even");
+  } else {
+    console.log(num + " is Odd");
+  }
+}
+
+checkEvenOdd(7); // Output: "7 is Odd"

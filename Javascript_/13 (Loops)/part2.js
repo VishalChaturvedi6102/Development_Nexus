@@ -17,6 +17,7 @@ function greet(){
 
 greet(10);
 
+
 function hi(){
     // Scope function ke andar hii hoga.
     let d = 10;

@@ -60,3 +60,6 @@ console.log(x,y,z);
 // z:(nothing)
 // y and z will remain in temporal dead zone until it is initailzed. Jo bhi variable temporal dead zone mei hota hai, hum usko access nahi kar sakte.
 
+
+
+

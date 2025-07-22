@@ -21,3 +21,5 @@ y = 10;
 z = 30;
 console.log(x); // 10
 console.log(y); // 10
+
+

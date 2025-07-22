@@ -1,4 +1,13 @@
 
+// Js code running ke time per  
+// CONTEXT EXECUTION
+// 1. Memory phase: here variables declared by the user get thier memory allocation first
+// 2. Code Phase: Here the instruction written by the user are excuted lin-by-line e.g. : var = 10 (declaration) 
+// console.log(); , if else loop wagera 
+
+
+
+
 // console.log(b); // Directly printing b, b is not defined error
 
 // var x;

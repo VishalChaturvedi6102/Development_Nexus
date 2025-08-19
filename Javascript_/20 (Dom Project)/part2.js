@@ -81,6 +81,8 @@ for(let i=0;i<team.length;i++){
 
 
 
+
+
 // Using for of loop.
 for(let val of team){
     console.log(val); // All lists will get printed in the console.

@@ -16,7 +16,6 @@ With the object model, JavaScript gets all the power it needs to create dynamic 
 
 
 
-
 *******************************************************************
 
 

@@ -33,8 +33,7 @@ for(let value of map2)
 
 
 
-
-
+// *** this is done for taking an object into very specific concertration
 
 for(let [key,value] of map2)
     console.log(key,value); // key and value dono destructure hoke aa rahi.

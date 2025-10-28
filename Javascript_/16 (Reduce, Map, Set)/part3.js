@@ -33,6 +33,9 @@ for(let value of map2)
 
 
 
+
+
+
 for(let [key,value] of map2)
     console.log(key,value); // key and value dono destructure hoke aa rahi.
 // 4 rohit

@@ -23,6 +23,15 @@ function add(a, b) {
   return a + b;
 }
 
+
+
+
+
+
+
+
+
+
 // Arrow Function
 const addArrow = (a, b) => a + b;
 
@@ -50,6 +59,7 @@ for (let i = 0; i < fruits.length; i++) {
 for (let fruit of fruits) {
   console.log(fruit);
 }
+
 
 // Using forEach
 fruits.forEach((fruit) => console.log(fruit));

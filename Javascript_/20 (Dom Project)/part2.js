@@ -122,6 +122,9 @@ console.log(par.childNodes); // NodeList --> NodeList(9) [text, li, text, li, t
 
 console.log(par.children); // HTMLCollection contains only 4 elements.
 
+
+
+
 /* iii: First and Last Child:
    Methods: element.firstChild, element.lastChild, 
    element.firstElementChild, element.lastElementChild

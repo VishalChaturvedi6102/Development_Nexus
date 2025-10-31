@@ -41,6 +41,9 @@ console.log(x,y,z);
 // Synchronous means ek ke baad ek. Jaha jane ke liye kaha jayega vahi jayega.
 
 
+
+
+
 // Let's say this is the code -->
 // console.log(x);
 // console.log(y);

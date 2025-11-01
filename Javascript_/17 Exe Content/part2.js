@@ -17,8 +17,6 @@ console.log(x); // undefined
 // console.log(y); // error marega.
 
 
-
-
 x = 10;
 y = 10;
 z = 30;

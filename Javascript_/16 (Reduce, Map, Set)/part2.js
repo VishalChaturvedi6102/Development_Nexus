@@ -6,6 +6,9 @@ console.log(set1); // Set(4) { 10, 20, 30, 40 } Even though I added 10 3 times, 
 
 console.log(typeof set1); // object
 
+
+
+
 const set2 = new Set();
 set2.add(4);
 set2.add(6);

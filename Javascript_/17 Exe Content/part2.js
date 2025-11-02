@@ -1,5 +1,4 @@
 
-
 // Hoisting in JS is the behaviour where variable and function declaration are moved to the top of their containing scope before the compilation phase, before the code has been executed.
 // This means that JS hoists or lifts the declaration, not the assignments to the top.
 
@@ -15,7 +14,6 @@ let y;
 let z;
 console.log(x); // undefined
 // console.log(y); // error marega.
-
 
 x = 10;
 y = 10;

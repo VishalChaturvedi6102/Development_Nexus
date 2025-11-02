@@ -47,6 +47,13 @@ console.log(x,y,z);
 
 
 
+
+
+
+
+
+
+
 // Let's say this is the code -->
 // console.log(x);
 // console.log(y);

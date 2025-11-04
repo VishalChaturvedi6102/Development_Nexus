@@ -132,6 +132,7 @@ console.log(par.children); // HTMLCollection contains only 4 elements.
 
 
 
+
 console.log(par.firstChild); // firstChild --> text
 console.log(par.firstElementChild); // But this gave me list only.
 // Same with last children too.

@@ -29,6 +29,8 @@ function factorial(n) {
   return n * factorial(n - 1);
 }
 
+
+
 console.log(factorial(5)); // Output: 120
 
 // Write a JavaScript function to check if a given string is a palindrome

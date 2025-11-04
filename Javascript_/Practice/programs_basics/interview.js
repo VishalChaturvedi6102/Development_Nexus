@@ -68,3 +68,7 @@ for (let fruit of fruits) {
 
 // Using forEach
 fruits.forEach((fruit) => console.log(fruit));
+
+
+
+

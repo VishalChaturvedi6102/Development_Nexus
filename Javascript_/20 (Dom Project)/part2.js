@@ -100,6 +100,7 @@ Array.from(team).forEach((val)=>{
    Description: Access the immediate parent of an element.
 */
 
+
 const first_list = document.querySelector('li');
 console.log(first_list); // first list.
 console.log(first_list.parentNode); // parent node.

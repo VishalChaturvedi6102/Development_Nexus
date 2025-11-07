@@ -44,7 +44,7 @@ console.log(x); // Output: undefined (due to hoisting)
 var x = 5;
 
 // let and const are not hoisted in the same way:
-// console.log(y); // ❌ ReferenceError
+// console.log(y); //  ReferenceError
 // let y = 10;
 
 
@@ -66,8 +66,14 @@ for (let fruit of fruits) {
 }
 
 
+
+
 // Using forEach
 fruits.forEach((fruit) => console.log(fruit));
+
+
+
+
 
 
 

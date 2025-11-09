@@ -66,14 +66,15 @@ for (let fruit of fruits) {
 }
 
 
-
-
 // Using forEach
 fruits.forEach((fruit) => console.log(fruit));
 
 
 
-
+// palindrome
+function isPalindrome(str){
+  return str === str.split('').reverse().join('');
+}
 
 
 

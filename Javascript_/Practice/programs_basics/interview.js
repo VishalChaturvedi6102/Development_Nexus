@@ -78,8 +78,29 @@ function isPalindrome(str){
 
 
 
+function createMessage(prefix) {
+  return function (message) { 
+    console.log(prefix + " " + message);
+  };
+}
+const sendMessage = createMessage("Hello"); 
+sendMessage("Cess!");
 
 
+
+
+
+
+
+(function () {
+       
+}());
+
+(function () {
+  console.log(
+    "roadmap.sh helps prepare for  JavaScript job interview questions"
+  );
+})();
 
 
 

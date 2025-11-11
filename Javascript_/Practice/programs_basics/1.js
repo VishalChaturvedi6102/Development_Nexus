@@ -58,16 +58,6 @@ fetchMultipleData();
 
 
 
-
-
-
-
-
-
-
-
-
-
 // Check if a Number is Even or Odd
 function checkEvenOdd(num) {
   if (num % 2 === 0) {

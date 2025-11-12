@@ -68,3 +68,36 @@ function checkEvenOdd(num) {
 }
 
 checkEvenOdd(7); // Output: "7 is Odd"
+
+
+
+
+// debounce
+import { debounce } from 'lodash';
+
+const searchInput = document.getElementById('search-input');
+
+const debouncedSearch = debounce(() => {
+  // Perform the search operation here
+  console.log('Searching for:', searchInput.value);
+}, 300);
+
+searchInput.addEventListener('input', debouncedSearch)
+
+
+
+// promise all
+const promise1 = fetch('https://api.example.com/data/1');
+const promise2 = fetch('https://api.example.com/data/2');
+const promise3 = fetch('https://api.example.com/data/3');
+
+Promise.all([promise1, promise2, promise3])
+  .then((responses) => {
+    // Executes only when all promises are resolved.
+    console.log('All responses:', responses);
+  })
+  .catch((error) => {
+    // Catches any error from any promise.
+    console.error('Error:', error);
+  });
+

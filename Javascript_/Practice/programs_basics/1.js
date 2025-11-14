@@ -153,6 +153,7 @@ console.log(deepEqual(object1, object2)); // true
 
 
 
+
 // event emitter
 const eventEmitter = new EventEmitter();
 

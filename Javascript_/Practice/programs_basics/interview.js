@@ -93,13 +93,6 @@ function createMessage(prefix) {
 }
 const sendMessage = createMessage("Hello"); 
 sendMessage("Cess!");
-
-
-
-
-
-
-
 (function () {      
 }());
 
@@ -108,6 +101,39 @@ sendMessage("Cess!");
     "roadmap.sh helps prepare for  JavaScript job interview questions"
   );
 })();
+
+
+
+
+// array.prototype reduce
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce(function (accumulator, currentValue) {
+  return accumulator + currentValue;
+}, 0);
+
+console.log(sum); // Output: 15
+
+
+// Simplifying arrays – Flattening
+const nestedArray = [1, [2, [3, [4, [5]]]]];
+const flatArray = nestedArray.flat(Infinity);
+
+console.log(flatArray); // Output: [1, 2, 3, 4, 5]
+
+// Custom recursive array flattener
+function flattenArray(arr) {
+  return arr.reduce(
+    (acc, val) =>
+      Array.isArray(val) ? acc.concat(flattenArray(val)) : acc.concat(val),
+    [],
+  );
+}
+
+const nestedArray = [1, [2, [3, [4, [5]]]]];
+const flatArray = flattenArray(nestedArray);
+
+console.log(flatArray); // Output: [1, 2, 3, 4, 5]
+
 
 
 

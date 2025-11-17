@@ -139,6 +139,38 @@ console.log(flatArray); // Output: [1, 2, 3, 4, 5]
 
 
 
+// get
+const user = { address: { city: 'New York' } };
+
+console.log(_.get(user, 'address.city')); // 'New York'
+console.log(user.address?.city); // 'New York'
+
+
+// hoisting with var
+console.log(foo); // undefined
+var foo = 1;
+console.log(foo); // 1
+
+// hoisting with let, const and class
+console.log(y); // ReferenceError
+let y = 'local';
+
+
+// functional hoisting
+foo(); // 'FOOOOO'
+
+function foo() {
+  console.log('FOOOOO');
+}
+
+// Function expressions
+
+console.log(bar); // undefined
+bar(); // TypeError: bar is not a function
+
+var bar = function () {
+  console.log('BARRRR');
+};
 
 
 

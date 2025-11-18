@@ -175,4 +175,42 @@ var bar = function () {
 
 
 
+// higher-order function
+
+// accept another func.
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+function greetUser(greeter, name) {
+  console.log(greeter(name));
+}
+
+greetUser(greet, 'Alice'); // Hello, Alice!
+
+
+// Returns another function
+function multiplier(factor) {
+  return function (num) {
+    return num * factor;
+  };
+}
+
+const double = multiplier(2);
+console.log(double(4)); // 8
+
+
+
+// event bubbling
+const parent = document.getElementById('parent');
+const child = document.getElementById('child');
+
+parent.addEventListener('click', () => {
+  console.log('Parent clicked');
+});
+
+child.addEventListener('click', () => {
+  console.log('Child clicked');
+});
+
 

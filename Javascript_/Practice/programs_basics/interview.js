@@ -214,3 +214,60 @@ child.addEventListener('click', () => {
 });
 
 
+
+
+
+
+// Event Delegation
+const itemList = document.getElementById('item-list');
+
+itemList.addEventListener('click', (event) => {
+  if (event.target.tagName === 'LI') {
+    console.log(`Clicked on ${event.target.textContent}`);
+  }
+});
+
+
+
+// this
+function Person(name) {
+  this.name = name;
+}
+const person = new Person('Alice');
+console.log(person.name); // 'Alice'
+
+
+// apply call bind
+function greet() {
+  console.log(this.name);
+}
+const persons = { name: 'Alice' };
+greet.call(person); // 'Alice'
+
+// method call : this
+const obj = {
+  name: 'Alice',
+  greet() {
+    console.log(this.name);
+  },
+};
+obj.greet(); // 'Alice'
+
+
+// Free function call
+function greet(){
+  console.log(this);
+}
+greet();
+
+
+// arrow functions: this
+const obj1 = {
+  name: 'Alice',
+  greet: () => {
+    console.log(this.name); // Inherits `this` from enclosing scope
+  },
+};
+obj.greet(); // undefined
+
+

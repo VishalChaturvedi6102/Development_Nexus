@@ -271,3 +271,45 @@ const obj1 = {
 obj.greet(); // undefined
 
 
+// Function.prototype.bind
+const john = {
+  age: 42,
+  getAge: function () {
+    return this.age;
+  },
+};
+
+console.log(john.getAge()); // 42
+
+const unboundGetAge = john.getAge;
+console.log(unboundGetAge()); // undefined
+
+const boundGetAge = john.getAge.bind(john);
+console.log(boundGetAge()); // 42
+
+const mary = { age: 21 };
+const boundGetAgeMary = john.getAge.bind(mary);
+console.log(boundGetAgeMary()); // 21
+
+
+
+// arrow functions in constructors
+const Person = function (name) {
+  this.name = name;
+  this.sayName1 = function () {
+    console.log(this.name);
+  };
+  this.sayName2 = () => {
+    console.log(this.name);
+  };
+};
+
+const johns = new Person('John');
+const dave = new Person('Dave');
+
+john.sayName1(); // John
+john.sayName2(); // John
+
+john.sayName1.call(dave); // Dave
+john.sayName2.call(dave); // John
+

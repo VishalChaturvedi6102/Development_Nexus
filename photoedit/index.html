@@ -1,0 +1,243 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Before / After Side-by-Side</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gap: 16px;
+      --overlay-size: 2.6rem;
+    }
+
+    body{
+      margin: 0;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      box-sizing: border-box;
+      font-family: system-ui;
+    }
+
+    .side-by-side{
+      display: flex;
+      gap: var(--gap);
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .card{
+      flex: 1 1 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      min-height: 300px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    }
+
+    .card img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+
+    .card:hover img{
+      transform: scale(1.03);
+    }
+
+    /* TEXT OVERLAY UPDATED TO TOP CENTER */
+    .overlay{
+      position: absolute;
+      top: 15px; /* distance from top */
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      width: 100%;
+    }
+
+    .label{
+      font-family: "Pacifico", cursive;
+      font-weight: 700;
+      color: #fff;
+      font-size: var(--overlay-size);
+      padding: 8px 28px;
+      background: rgba(0, 0, 0, 0.5);   /* transparent black effect */
+      border-radius: 50px;               /* round edges */
+      text-shadow: 0 3px 10px rgba(0,0,0,0.85);
+    }
+
+    @media (max-width: 640px){
+      .side-by-side{
+        flex-direction: column;
+      }
+      .card{
+        min-height: 220px;
+      }
+      :root{ --overlay-size: 2rem; }
+      .overlay{ top: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="side-by-side">
+    <div class="card">
+      <img src="img1.jpg" alt="Before">
+      <div class="overlay">
+        <div class="label">before</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img2.jpg" alt="After">
+      <div class="overlay">
+        <div class="label">after</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html> -->
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Before After Transformation</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --gap: 16px;
+      --overlay-size: 2.4rem;
+      --bottom-text-size: 6rem; /* increased */
+    }
+
+    body{
+      margin: 0;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      box-sizing: border-box;
+      font-family: system-ui;
+    }
+
+    .side-by-side{
+      display: flex;
+      gap: var(--gap);
+      width: 100%;
+      max-width: 1400px;  /* width increased for alignment */
+      position: relative;
+    }
+
+    .card{
+      flex: 1 1 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      min-height: 350px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    .card img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+
+    .card:hover img{
+      transform: scale(1.03);
+    }
+
+    .overlay{
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      pointer-events: none;
+    }
+
+    .label{
+      font-family: "Pacifico", cursive;
+      font-weight: 700;
+      color: #fff;
+      font-size: var(--overlay-size);
+      padding: 8px 28px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50px;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.85);
+    }
+
+    /* Bottom Transformation Title */
+    .bottom-title{
+      position: absolute;
+      bottom: 45px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: "Pacifico", cursive;
+      font-size: var(--bottom-text-size);
+      font-weight: 900;
+      letter-spacing: 18px;     /* stretched full width */
+      color: #ffffff;           /* white color */
+      text-align: center;
+      pointer-events: none;
+      width: 100%;              /* Full width across both images */
+      text-shadow: 0 8px 28px rgba(0,0,0,0.65);
+    }
+
+    @media (max-width: 640px){
+      .side-by-side{
+        flex-direction: column;
+      }
+      .bottom-title{
+        bottom: 25px;
+        font-size: 3rem;
+        letter-spacing: 5px;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="side-by-side">
+
+    <div class="card">
+      <img src="img1.jpg" alt="Before">
+      <div class="overlay"><div class="label">before</div></div>
+    </div>
+
+    <div class="card">
+      <img src="img2.jpg" alt="After">
+      <div class="overlay"><div class="label">after</div></div>
+    </div>
+
+    <div class="bottom-title">TRANSFORMATION</div>
+
+  </div>
+
+</body>
+</html>

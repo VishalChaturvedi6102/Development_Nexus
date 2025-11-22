@@ -313,3 +313,45 @@ john.sayName2(); // John
 john.sayName1.call(dave); // Dave
 john.sayName2.call(dave); // John
 
+
+
+
+
+
+
+
+// null undefined not defined
+
+let a;
+console.log(a); // undefined
+
+let bc = null;
+console.log(b); // null
+
+try {
+  console.log(c); // ReferenceError: c is not defined
+} catch (e) {
+  console.log('c is undeclared');
+}
+
+
+
+// Function.prototype.bind
+const johnn = {
+  age: 42,
+  getAge: function () {
+    return this.age;
+  },
+};
+
+console.log(john.getAge()); // 42
+
+const unboundGetAges = john.getAge;
+console.log(unboundGetAge()); // undefined
+
+const boundGetAges = john.getAge.bind(john);
+console.log(boundGetAge()); // 42
+
+const marry = { age: 21 };
+const boundGetAgeMarry = john.getAge.bind(mary);
+console.log(boundGetAgeMary()); // 21

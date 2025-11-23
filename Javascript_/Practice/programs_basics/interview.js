@@ -355,3 +355,8 @@ console.log(boundGetAge()); // 42
 const marry = { age: 21 };
 const boundGetAgeMarry = john.getAge.bind(mary);
 console.log(boundGetAgeMary()); // 21
+
+
+
+
+

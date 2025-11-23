@@ -164,3 +164,21 @@ eventEmitter.on('customEvent', (data) => {
 
 // Emit the event
 eventEmitter.emit('customEvent', { message: 'Hello, world!' });
+
+
+// Print Numbers from 1 to N
+// Time Complexity O(n)
+const num = 10;
+
+for (let i = 1; i <= num; i++) {
+  console.log(i);
+}
+
+
+// numbers n to 1
+// Time Complexity O(n)
+const num1 = 10;
+
+for (let i = 1; i <= num1; i++) {
+  console.log(num - i + 1);
+}

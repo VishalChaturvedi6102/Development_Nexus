@@ -352,9 +352,15 @@ console.log(unboundGetAge()); // undefined
 const boundGetAges = john.getAge.bind(john);
 console.log(boundGetAge()); // 42
 
+
 const marry = { age: 21 };
 const boundGetAgeMarry = john.getAge.bind(mary);
 console.log(boundGetAgeMary()); // 21
+
+
+
+
+
 
 
 

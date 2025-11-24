@@ -28,6 +28,8 @@ id3.style.backgroundColor = "gold"; // Hello Money now has gold background color
         specified CSS selector. 
 */
 
+
+
 const obj = document.querySelectorAll('.header1');
 console.log(obj); // Gives me a NodeList of instances where header1 came. Similar to array.
 // How to access them?

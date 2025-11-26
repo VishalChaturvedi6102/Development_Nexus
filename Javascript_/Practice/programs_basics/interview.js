@@ -359,6 +359,29 @@ console.log(boundGetAgeMary()); // 21
 
 
 
+// var: function-scoped, can be redeclared
+function f(){
+  var x = 1;
+  if(true){ var x = 2; console.log(x); } // 2
+  console.log(x); // 2
+}
+
+// let/const: block-scoped
+{
+  let a = 1;
+  const b = 2;
+  // a = 3; b = 4; // allowed for a, not for b
+}
+
+
+// arrow functions — differences vs. regular functions
+const objj = {
+  id: 42,
+  regular: function(){ return this.id; },
+  arrow: () => this.id
+};
+console.log(obj.regular()); // 42
+console.log(obj.arrow()); // undefined (or global this)
 
 
 

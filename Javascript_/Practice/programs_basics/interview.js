@@ -374,6 +374,8 @@ function f(){
 }
 
 
+
+
 // arrow functions — differences vs. regular functions
 const objj = {
   id: 42,
@@ -382,6 +384,10 @@ const objj = {
 };
 console.log(obj.regular()); // 42
 console.log(obj.arrow()); // undefined (or global this)
+
+
+
+
 
 
 

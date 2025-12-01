@@ -406,3 +406,6 @@ console.log(obj.arrow()); // undefined (or global this)
 
 
 
+
+
+

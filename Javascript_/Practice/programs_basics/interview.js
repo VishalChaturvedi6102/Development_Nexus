@@ -387,6 +387,16 @@ console.log(obj.arrow()); // undefined (or global this)
 
 
 
+// object.create
+const personPrototype = {
+  greet() {
+    console.log(`Hello, my name is ${this.name}.`);
+  },
+};
+
+const personss = Object.create(personPrototype);
+person.name = 'John';
+person.greet(); // Hello, my name is John.
 
 
 

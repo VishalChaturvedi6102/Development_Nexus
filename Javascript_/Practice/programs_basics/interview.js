@@ -402,6 +402,7 @@ person.greet(); // Hello, my name is John.
 
 
 
+
 // prototype inheritence
 function Animal(name) {
   this.name = name;
@@ -424,6 +425,14 @@ Dog.prototype.bark = function () {
 let fido = new Dog('Fido', 'Labrador');
 fido.bark(); // "Woof!"
 fido.sayName(); // "My name is Fido"
+
+
+
+
+
+
+
+
 
 
 

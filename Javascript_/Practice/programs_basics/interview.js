@@ -403,6 +403,10 @@ person.greet(); // Hello, my name is John.
 
 
 
+
+
+
+
 // prototype inheritence
 function Animal(name) {
   this.name = name;

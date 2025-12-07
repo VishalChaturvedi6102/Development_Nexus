@@ -394,13 +394,10 @@ const personPrototype = {
   },
 };
 
+
 const personss = Object.create(personPrototype);
 person.name = 'John';
 person.greet(); // Hello, my name is John.
-
-
-
-
 
 
 

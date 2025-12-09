@@ -453,6 +453,21 @@ export default function mean(array) {
 
 
 
+// pallindrom code
+function isPalindrome(str) {
+  // Convert to lowercase and remove non-alphanumeric characters for robust checking
+  const cleanedStr = str.toLowerCase().replace(/[^a-z0-9]/g, ''); 
+  const reversedStr = cleanedStr.split('').reverse().join('');
+  return cleanedStr === reversedStr;
+}
+
+console.log(isPalindrome("racecar")); // true
+console.log(isPalindrome("hello"));   // false
+console.log(isPalindrome("Madam, I'm Adam")); // true (after cleaning)
+
+
+
+
 
 
 

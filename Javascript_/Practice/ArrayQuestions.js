@@ -56,3 +56,29 @@ function twoSum(nums, target_num) {
   return indexnum;
 }
 console.log(twoSum([10,20,10,40,50,60,70], 50));
+
+
+
+
+// Swap the case of each character of a string, upper case to lower and vice versa
+var str = 'c';
+var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+
+var result = [];
+
+
+for (var x = 0; x < str.length; x++) {
+  if (UPPER.indexOf(str[x]) !== -1) {
+    result.push(str[x].toLowerCase());
+  }
+  else if (LOWER.indexOf(str[x]) !== -1) {
+    result.push(str[x].toUpperCase());
+  }
+  else {
+    result.push(str[x]);
+  }
+}
+
+console.log(result.join(''));
+

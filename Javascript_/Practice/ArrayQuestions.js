@@ -97,3 +97,38 @@ for (var i = 0; i < array.length; i += 1) {
   p *= array[i];
 }
 console.log('Sum : ' + s + ' Product :  ' + p); 
+
+
+
+//Remove duplicate items from an array, ignore case sensitivity
+const nums = [1, 2, 2, 3, 1, 2, 4, 5, 4, 2, 6];
+const uniquenumSet = new Set(nums);
+const uniqueNumsArray = [...uniqueNumsSet];
+console.log(uniqueNumsArray);
+
+
+
+
+
+// Function to find duplicates in an array
+const find_duplicate_in_array = (arra1) => {
+
+    const object = {};
+    const result = [];
+
+    arra1.forEach((item) => {
+        if (!object[item]) {
+            object[item] = 0;
+        }
+     
+        object[item] += 1;
+    });
+
+    for (const prop in object) {
+        if (object[prop] >= 2) {
+            result.push(prop);
+        }
+    }
+    return result;
+};
+console.log(find_duplicate_in_array([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]));

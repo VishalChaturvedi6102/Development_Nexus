@@ -132,3 +132,20 @@ const find_duplicate_in_array = (arra1) => {
     return result;
 };
 console.log(find_duplicate_in_array([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]));
+
+
+
+
+
+
+// Function to calculate the sum of squares of elements in an array
+const sum_sq = (array) => {
+  let sum = 0;
+
+  array.forEach((element) => {
+    sum += Math.pow(element, 2);
+  });
+  return sum;
+};
+
+console.log(sum_sq([0, 1, 2, 3, 4]));

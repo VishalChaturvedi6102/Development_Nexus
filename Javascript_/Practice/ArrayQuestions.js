@@ -149,3 +149,30 @@ const sum_sq = (array) => {
 };
 
 console.log(sum_sq([0, 1, 2, 3, 4]));
+
+
+
+// Display Colors with Ordinals
+// Write a JavaScript program to display the colors in the following way.
+// Here is the sample array:
+// color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+// o = ["th","st","nd","rd"]
+// Output
+// "1st choice is Blue ."
+// "2nd choice is Green."
+// "3rd choice is Red."
+
+const color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+const Ordinal = (n) => {
+  const o = ["th", "st", "nd", "rd"];
+  const x = n % 100;
+  return x + (o[(x - 20) % 10] || o[x] || o[0]);
+};
+
+color.forEach((_, index) => {
+  const ordinal = index + 1;
+  const output = `${Ordinal(ordinal)} choice is ${color[index]}.`;
+
+  console.log(output);
+});
+

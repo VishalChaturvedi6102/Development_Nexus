@@ -176,3 +176,25 @@ color.forEach((_, index) => {
   console.log(output);
 });
 
+
+
+
+//  find the difference of two arrays
+const differenceOf2Arrays = (array1, array2) => {
+  let temp = [];
+  array1 = array1.toString().split(',').map(Number);
+  
+  array2 = array2.toString().split(',').map(Number);
+  for (let i of array1) {
+    if (array2.indexOf(i) === -1)
+      temp.push(i);
+  }
+
+  for (let i of array2) {
+    if (array1.indexOf(i) === -1)
+      temp.push(i);
+  }
+  return temp.sort((a, b) => a - b);
+};
+console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10]));
+console.log(differenceOf2Arrays([1, 2, 3, 4, 5], [1, [2], [3, [[4]]], [5, 6]]));

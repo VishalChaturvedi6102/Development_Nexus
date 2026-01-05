@@ -223,3 +223,27 @@ const twoSum = (nums, target_num) => {
 };
 
 console.log(twoSum([10, 20, 10, 40, 50, 60, 70], 50));
+
+
+
+// Convert an amount to coins
+
+function amountToCoins(amount, coins) {
+    if (amount <= 0 || !Array.isArray(coins) || coins.length === 0) {
+        return [];
+    }
+    const result = [];
+    let remainingAmount = amount;
+    for (let i = 0; i < coins.length; i++) {
+        const coin = coins[i];
+        const count = Math.floor(remainingAmount / coin);
+        for (let j = 0; j < count; j++) {
+            result.push(coin);
+        }
+        remainingAmount %= coin;
+    }
+
+    return result;
+}
+const result = amountToCoins(46, [25, 10, 5, 2, 1]);
+console.log(result); // Output: [25, 10, 10, 1]

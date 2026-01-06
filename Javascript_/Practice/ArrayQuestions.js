@@ -247,3 +247,28 @@ function amountToCoins(amount, coins) {
 }
 const result = amountToCoins(46, [25, 10, 5, 2, 1]);
 console.log(result); // Output: [25, 10, 10, 1]
+
+
+
+
+
+
+//  Retrieve the value of a specified property from all elements in an array
+const library = [ 
+  { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
+  { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
+  { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
+];
+
+const property_value = (array, property_key) => {
+  const arr = [];
+  for (const array_items of array) {
+    if (array_items.hasOwnProperty(property_key)) {
+      arr.push(array_items[property_key]);
+    }
+  }
+  return arr;
+};
+
+console.log(property_value(library, 'title'));
+console.log(property_value(library, 'author'));

@@ -287,3 +287,12 @@ const property_value = (array, property_key) => {
 
 console.log(property_value(library, 'title'));
 console.log(property_value(library, 'author'));
+
+
+
+
+ // Define a function named truncate that takes two parameters: a string (str) and the number of words to truncate to (no_words)
+function truncate(str, no_words) {
+    return str.split(" ").splice(0,no_words).join(" ");
+}
+console.log(truncate('The quick brown fox jumps over the lazy dog', 4));

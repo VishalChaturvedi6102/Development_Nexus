@@ -374,3 +374,20 @@ const differenceOfTwoArrays = (array1, array2) => {
 
 console.log(differenceOf2Arrays([1, 2, 3], [100, 2, 1, 10]));
 console.log(differenceOf2Arrays([1, 2, 3, 4, 5], [1, [2], [3, [[4]]], [5, 6]]));
+
+
+
+
+
+
+// Function to check if all numbers in an array are prime
+function test(arr_nums) {
+  return arr_nums.every(n => !'1'.repeat(n).match(/^1?$|^(11+?)\1+$/));
+}
+nums = [2, 3, 5, 7];
+console.log("Original array of integers: " + nums);
+console.log("In the said array, check if every number is prime or not: " + test(nums));
+
+nums = [2, 3, 5, 7, 8];
+console.log("Original array of integers: " + nums);
+console.log("In the said array, check if every number is prime or not: " + test(nums));

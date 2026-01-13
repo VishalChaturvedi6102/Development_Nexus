@@ -391,3 +391,72 @@ console.log("In the said array, check if every number is prime or not: " + test(
 nums = [2, 3, 5, 7, 8];
 console.log("Original array of integers: " + nums);
 console.log("In the said array, check if every number is prime or not: " + test(nums));
+
+
+
+
+
+
+
+
+
+// Implement a stack with push and pop operations
+class Stack {
+  constructor() {
+    this.items = [];
+  }
+  push(element) {
+    this.items.push(element);
+  }
+  pop() {
+    if (this.items.length == 0)
+      return "Underflow";
+    return this.items.pop();
+  }
+  peek() {
+    if (this.items.length == 0)
+      return "No elements in Stack";
+    return this.items[this.items.length - 1];
+  }
+  
+  isEmpty() {
+    return this.items.length == 0;
+  }
+
+  size() {
+    return this.items.length;
+  }  
+  
+displayStack(stack) {
+  console.log("Stack elements are:");
+  let str = "";
+  for (let i = 0; i < stack.items.length; i++)
+    str += stack.items[i] + " ";
+  return str.trim();
+ }      
+}
+console.log("Initialize a stack:")
+let stack = new Stack();
+console.log("Is the stack empty?");
+console.log(stack.isEmpty()); // true
+console.log("Input some elements on the stack:")
+stack.push(1);
+stack.push(2);
+stack.push(3);
+stack.push(4);
+stack.push(5);
+console.log(stack.displayStack(stack));
+console.log("Top of the element of the stack:");
+console.log(stack.peek()); 
+console.log("Size of the stack:");
+console.log(stack.size()); 
+console.log("Remove one element from the stack:")
+stack.pop();
+console.log(stack.displayStack(stack));
+console.log("Top of the element of the stack:");
+console.log(stack.peek());  
+console.log("Is the stack empty?");
+console.log(stack.isEmpty());
+console.log("Size of the stack:");
+console.log(stack.size());
+

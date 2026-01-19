@@ -538,3 +538,20 @@ function remove_non_word (str) {
     return str.replace(PATTERN, '');
 }
 console.log(remove_non_word('PHP ~!@#$%^&*()+`-={}[]|\\:";\'/?><., MySQL'));
+
+
+
+
+// Function to generate an array of numbers in a specified range
+function array_range(start, len) 
+{
+  var arr = new Array(len);
+  for (var i = 0; i < len; i++, start++) 
+  {
+    arr[i] = start;
+  }
+  return arr;
+}
+
+console.log(array_range(1, 4));
+console.log(array_range(-6, 4));

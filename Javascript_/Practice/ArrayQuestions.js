@@ -552,7 +552,6 @@ function array_range(start, len)
   }
   return arr;
 }
-
 console.log(array_range(1, 4));
 console.log(array_range(-6, 4));
 

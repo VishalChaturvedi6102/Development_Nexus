@@ -579,3 +579,23 @@ const inputArray = [1, 2, 3];
 const subsetLength = 2;
 const resultSubsets = getSubsetsWithLength(inputArray, subsetLength);
 console.log(resultSubsets);
+
+
+
+
+
+
+
+
+// Function to create an object indexed by a specified key
+const indexOn = (arr, key) =>
+  arr.reduce((obj, v) => {
+    const { [key]: id, ...data } = v;
+    obj[id] = data;
+    return obj;
+  }, {});
+
+console.log(indexOn([
+  { id: 10, name: 'apple' },
+  { id: 20, name: 'orange' }
+], x => x.id));

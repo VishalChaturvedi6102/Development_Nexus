@@ -717,3 +717,33 @@ function move(arr, old_index, new_index) {
 }
 console.log(move([10, 20, 30, 40, 50], 0, 2));
 console.log(move([10, 20, 30, 40, 50], -1, -2));
+
+
+
+
+
+
+
+
+
+
+// Function to merge two arrays, removing duplicates and maintaining the order
+const mergeArray = (array1, array2) => {
+    const resultArray = [];
+    const arr = array1.concat(array2);
+    let len = arr.length;
+    const assoc = {};
+    while (len--) {
+        const item = arr[len];
+        if (!assoc[item]) { 
+            resultArray.unshift(item);
+            assoc[item] = true;
+        }
+    }
+    return resultArray;
+};
+
+const array1 = [1, 2, 3];
+const array2 = [2, 30, 1];
+
+console.log(mergeArray(array1, array2));

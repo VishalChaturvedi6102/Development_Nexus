@@ -783,3 +783,61 @@ function longest_substring_without_repeating_characters(input) {
 }
 console.log(longest_substring_without_repeating_characters("google.com")); 
 console.log(longest_substring_without_repeating_characters("example.com"));  
+
+
+
+
+
+
+
+
+// Delayed Callback Execution
+function invokeAfterDelay(callback) {
+  setTimeout(callback, 2000); 
+}
+function display_message() {
+  console.log('Hello!');
+}
+invokeAfterDelay(display_message);
+
+
+
+
+// Callback to Promise Conversion
+function callback_BasedFunction(arg1, arg2, callback) {
+  setTimeout(() => {
+    const result = arg1 + arg2;
+    if (result % 2 !== 0) {
+      callback(null, result);
+    } else {
+      callback(new Error('Result is not odd!'), null);
+    }
+  }, 1000);
+}
+
+function promisifiedFunction(arg1, arg2) {
+  return new Promise((resolve, reject) => {
+    callback_BasedFunction(arg1, arg2, (error, result) => {
+      if (error) {
+        reject(error); 
+      } else {
+        resolve(result); 
+      }
+    });
+  });
+}
+promisifiedFunction(2, 3)
+  .then(result => {
+    console.log('Result:', result);
+  })
+  .catch(error => {
+    console.log('Error:', error.message);
+  });
+
+promisifiedFunction(2, 4)
+  .then(result => {
+    console.log('Result:', result);
+  })
+  .catch(error => {
+    console.log('Error:', error.message);
+  });

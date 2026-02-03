@@ -841,3 +841,23 @@ promisifiedFunction(2, 4)
   .catch(error => {
     console.log('Error:', error.message);
   });
+
+
+
+  // Generates all combinations of a string
+function substrings(str) {
+  const result = [];
+  function search_combination(start, curr) {
+    if (curr.length > 0) {
+      result.push(curr);
+    }
+    for (let i = start; i < str.length; i++) {
+      search_combination(i + 1, curr + str[i]);
+    }
+  }
+  search_combination(0, '');
+  return result;
+}
+const str = 'dog';
+const result = substrings(str);
+console.log(result); 

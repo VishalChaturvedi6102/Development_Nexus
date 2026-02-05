@@ -890,3 +890,22 @@ console.log(humanize_format(1));
 console.log(humanize_format(8));  
 console.log(humanize_format(301));  
 console.log(humanize_format(402));
+
+
+
+
+
+
+// Define a function named unique_char that returns a string containing unique characters from the input string
+function unique_char(str1) {
+
+  var str = str1;
+  var uniql = "";
+  for (var x = 0; x < str.length; x++) {
+    if (uniql.indexOf(str.charAt(x)) == -1) {
+      uniql += str[x];
+    }
+  }
+  return uniql;
+}
+console.log(unique_char("thequickbrownfoxjumpsoverthelazydog")); 

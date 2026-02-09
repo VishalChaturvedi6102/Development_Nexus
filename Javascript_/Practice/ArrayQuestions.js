@@ -962,3 +962,24 @@ function array_range(start, len)
 }
 console.log(array_range(1, 4));
 console.log(array_range(-6, 4));
+
+
+
+
+
+// Function to find the first non-repeated character in a string
+function findFirstNotRepeatedChar(str) {
+  var charMap = {};
+  for (var i = 0; i < str.length; i++) {
+    var char = str[i];
+    charMap[char] = (charMap[char] || 0) + 1;
+  }
+  for (var i = 0; i < str.length; i++) {
+    if (charMap[str[i]] === 1) {
+      return str[i];
+    }
+  }
+  return null; 
+}
+var result = findFirstNotRepeatedChar('abacddbec');
+console.log(result); 

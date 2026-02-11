@@ -996,3 +996,35 @@ console.log(twice3040([30, 30]));
 console.log(twice3040([40, 40])); 
 console.log(twice3040([20, 20])); 
 console.log(twice3040([30])); 
+
+
+
+
+
+
+
+
+// Function to get all possible subsets with a fixed length
+function getSubsetsWithLength(arr, length) {
+    const result = [];
+    function generateSubsets(currentSubset, start) {
+        if (currentSubset.length === length) {
+            result.push([...currentSubset]); 
+            return;
+        }
+
+        for (let i = start; i < arr.length; i++) {
+            currentSubset.push(arr[i]);
+            generateSubsets(currentSubset, i + 1);
+            currentSubset.pop();
+        }
+    }
+
+    generateSubsets([], 0);
+    return result;
+}
+
+const inputsArray = [1, 2, 3];
+const subsetsLength = 2;
+const resultsSubsets = getSubsetsWithLength(inputArray, subsetLength);
+console.log(resultSubsets);

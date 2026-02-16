@@ -1120,3 +1120,25 @@ function move(arr, old_index, new_index) {
 }
 console.log(move([10, 20, 30, 40, 50], 0, 2));
 console.log(move([10, 20, 30, 40, 50], -1, -2));
+
+
+
+
+// Define a function named text_truncate that takes three parameters: str (the input string), length (the maximum length of the output string), and ending (the optional ending to append if the string is truncated)
+text_truncate = function(str, length, ending) {
+    if (length == null) {
+      length = 100;
+    }
+    if (ending == null) {
+      ending = '...';
+    }
+    if (str.length > length) {
+      return str.substring(0, length - ending.length) + ending;
+    } else {
+      return str;
+    }
+  };
+console.log(text_truncate('We are doing JS string exercises.'))
+console.log(text_truncate('We are doing JS string exercises.',19))
+console.log(text_truncate('We are doing JS string exercises.',15,'!!'))
+

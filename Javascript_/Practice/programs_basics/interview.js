@@ -570,3 +570,13 @@ console.log(Power_of_four("16"))
 
 
 
+// Define a function called string_chop, taking two parameters: str (the input string) and size (the size of each chunk).
+string_chop =  function(str, size){
+      if (str == null) return [];
+      str = String(str);
+      size = ~~size;
+return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
+}
+console.log(string_chop('w3resource'));
+console.log(string_chop('w3resource',2));
+console.log(string_chop('w3resource',3));

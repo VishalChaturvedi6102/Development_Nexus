@@ -580,3 +580,19 @@ return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
 console.log(string_chop('w3resource'));
 console.log(string_chop('w3resource',2));
 console.log(string_chop('w3resource',3));
+
+
+
+
+// Define a function named first_last that takes a parameter str1
+function first_last(str1) {
+  if (str1.length <= 1) {
+    return str1;
+  }
+  mid_char = str1.substring(1, str1.length - 1);
+  return (str1.charAt(str1.length - 1)) + mid_char + str1.charAt(0);
+}
+
+console.log(first_last('a'));
+console.log(first_last('ab'));
+console.log(first_last('abc')); 

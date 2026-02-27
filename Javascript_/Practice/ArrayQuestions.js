@@ -1289,3 +1289,19 @@ function move(arr, old_index, new_index) {
 }
 console.log(move([10, 20, 30, 40, 50], 0, 2));
 console.log(move([10, 20, 30, 40, 50], -1, -2));
+
+
+
+
+
+
+
+// Function to count the number of non-empty arrays inside an array
+function test(arr_nums){
+    return arr_nums.filter(n => n.length).length;
+}
+
+arr_nums = [2, 8, [6], 3, 3, 5, 3, 4, [5, 4]];
+console.log("Number of non-empty arrays inside the said array: " + test(arr_nums));
+arr_nums = [2, 8, [6, 3, 3], [4], 5, [3, 4, [5, 4]]];
+console.log("Number of non-empty arrays inside the said array: " + test(arr_nums));

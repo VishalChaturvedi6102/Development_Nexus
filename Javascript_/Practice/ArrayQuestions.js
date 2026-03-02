@@ -436,7 +436,7 @@ displayStack(stack) {
  }      
 }
 console.log("Initialize a stack:")
-let stack = new Stack();
+let stacks = new Stack();
 console.log("Is the stack empty?");
 console.log(stack.isEmpty()); 
 console.log("Input some elements on the stack:")
@@ -1347,3 +1347,9 @@ function longest_common_starting_substring(arr1) {
 console.log(longest_common_starting_substring(['go', 'google'])); 
 console.log(longest_common_starting_substring(['SQLInjection', 'SQLTutorial'])); 
 console.log(longest_common_starting_substring(['abcd', '1234'])); 
+
+
+
+
+
+

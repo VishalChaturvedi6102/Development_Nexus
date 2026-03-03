@@ -1353,3 +1353,18 @@ console.log(longest_common_starting_substring(['abcd', '1234']));
 
 
 
+// Sort an array in wave form
+function swap(arr, x, y) {
+    let temp = arr[x];
+    arr[x] = arr[y];
+    arr[y] = temp;
+}
+
+function sortInWave(arr) {
+    for (let i = 0; i < arr.length - 1; i += 2) {
+        swap(arr, i, i + 1);
+    }
+}
+let arr = [1, 2, 3, 4, 5];
+sortInWave(arr);
+console.log(arr.join(" "));

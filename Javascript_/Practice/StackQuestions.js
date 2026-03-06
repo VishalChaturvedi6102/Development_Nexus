@@ -54,3 +54,8 @@ console.log("Is the stack empty?");
 console.log(stack.isEmpty());
 console.log("Size of the stack:");
 console.log(stack.size());
+
+
+
+
+

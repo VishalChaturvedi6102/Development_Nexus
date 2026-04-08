@@ -1,0 +1,21 @@
+// Define a function named pythagorean_theorem that calculates the hypotenuse of a right triangle given the lengths of its two legs.
+
+// Pythagorean Theorem
+// Create a Pythagorean function in JavaScript.
+// Note : The Pythagorean Theorem tells us that the relationship in every right triangle is : c2 = a2 + b2, where c is the hypotenuse and a, b are two legs of the triangle.
+// Test Data:
+// console.log(pythagorean_theorem(2, 4));
+// console.log(pythagorean_theorem(3, 4));
+// Output :
+// 4.47213595499958
+// 5
+
+
+function pythagorean_theorem(x, y) {
+    if ((typeof x !== 'number') || (typeof y !== 'number')) 
+        return false; 
+    return Math.sqrt(x * x + y * y);
+}
+
+console.log(pythagorean_theorem(2, 4));
+console.log(pythagorean_theorem(3, 4));

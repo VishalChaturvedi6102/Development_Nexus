@@ -1,0 +1,22 @@
+// Define a function named nthroot that calculates the nth root of a given number.
+// Calculate nth Root of a Number
+// Write a JavaScript function to calculate the nth root of a number.
+// Test Data :
+// console.log(nthroot(64, 2));
+// 8
+// console.log(nthroot(64, -2));
+// 0.125
+function nthroot(x, n)
+{
+    ng = n % 2;
+    if((ng == 1) || x<0)
+        x = -x;
+    var r = Math.pow(x, 1 / n);
+    n = Math.pow(r, n);
+  
+    if(Math.abs(x - n) < 1 && (x > 0 === n > 0))
+        return ng ? -r : r; 
+}
+
+console.log(nthroot(64, 2));
+console.log(nthroot(64, -2));

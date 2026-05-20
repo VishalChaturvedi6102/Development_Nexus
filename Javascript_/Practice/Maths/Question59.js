@@ -1,0 +1,25 @@
+// Volume of a Pyramid
+
+// Write a JavaScript program to calculate the volume of a Pyramid.
+
+// In geometry, a pyramid is a polyhedron formed by connecting a polygonal base and a point, called the apex. Each base edge and apex form a triangle, called a lateral face. It is a conic solid with polygonal base. A pyramid with an n-sided base has n + 1 vertices, n + 1 faces, and 2n edges. All pyramids are self-dual.
+
+// Define a function volume_Pyramid that calculates the volume of a pyramid given its base length, base width, and height.
+const volume_Pyramid = (baseLength, baseWidth, height) => {
+  is_Number(baseLength, 'BaseLength');
+  is_Number(baseWidth, 'BaseWidth');
+  is_Number(height, 'Height');
+  return (baseLength * baseWidth * height) / 3.0;
+}
+
+const is_Number = (n, n_name = 'number') => {
+  if (typeof n !== 'number') {
+    throw new TypeError('The ' + n_name + ' is not Number type!');
+  } 
+  else if (n < 0 || (!Number.isFinite(n))) {
+    throw new Error('The ' + n_name + ' must be a positive values!');
+  }
+}
+console.log(volume_Pyramid(2.0, 3.0, 7.0));
+console.log(volume_Pyramid(2.0, 3.0, '7.0'));
+console.log(volume_Pyramid(2.0, -3.0, 7.0));

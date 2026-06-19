@@ -1,0 +1,38 @@
+// Check Orthogonal Vectors
+// Write a JavaScript program to check whether two vectors are orthogonal or not.
+// Two vectors are orthogonal if they are perpendicular to each other. i.e. the dot product of the two vectors is zero.
+// Let u and v are two vectors. The vectors u, v will be orthogonal if they are perpendicular, i.e., they form a right angle, or if the dot product they yield is zero.
+// u⊥v or u•v=0
+// Test Data:
+// ([2, 4, 1], [2, 1, -8]) -> true
+// ([1, 0, 1], [0, 0, 1]) -> false
+// ([1, 0, 0], [0, 1, 0]) -> true
+
+function test(nums1, nums2) {
+    
+    var total = 0;
+  
+    for(var i=0;i<nums1.length;i++){
+        total+=(nums1[i] *nums2[i]);
+    }
+    return total == 0;
+}
+
+
+nums1 = [2, 4, 1];
+nums2 = [2, 1, -8];
+console.log("Original vectors:");
+console.log(nums1+"\n"+nums2);
+console.log("Check the said vectors are orthogonal or not: " + test(nums1, nums2));
+
+nums1 = [1, 0, 1];
+nums2 = [0, 0, 1];
+console.log("Original vectors:");
+console.log(nums1+"\n"+nums2);
+console.log("Check the said vectors are orthogonal or not: " + test(nums1, nums2));
+
+nums1 = [1, 0, 0];
+nums2 = [0, 1, 0];
+console.log("Original vectors:");
+console.log(nums1+"\n"+nums2);
+console.log("Check the said vectors are orthogonal or not: " + test(nums1, nums2));

@@ -24,7 +24,6 @@ function merge_sort(left_part,right_part)
 
 	while (i < left_part.length || j < right_part.length) {
 		if (i === left_part.length) {
-			// j is the only index left_part
 			results.push(right_part[j]);
 			j++;
 		} 
